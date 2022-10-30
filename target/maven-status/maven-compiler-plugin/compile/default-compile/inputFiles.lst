@@ -1,7 +1,12 @@
+D:\java\workspace\EasyMall-Maven\src\main\java\easymall\service\ProductsService.java
 D:\java\workspace\EasyMall-Maven\src\main\java\easymall\service\UserService.java
 D:\java\workspace\EasyMall-Maven\src\main\java\easymall\controller\IndexController.java
 D:\java\workspace\EasyMall-Maven\src\main\java\easymall\controller\UserController.java
+D:\java\workspace\EasyMall-Maven\src\main\java\easymall\service\ProductsServiceImpl.java
+D:\java\workspace\EasyMall-Maven\src\main\java\easymall\controller\ProductsController.java
 D:\java\workspace\EasyMall-Maven\src\main\java\easymall\po\User.java
 D:\java\workspace\EasyMall-Maven\src\main\java\easymall\controller\ValiImage.java
+D:\java\workspace\EasyMall-Maven\src\main\java\easymall\po\Products.java
 D:\java\workspace\EasyMall-Maven\src\main\java\easymall\service\UserServiceImpl.java
+D:\java\workspace\EasyMall-Maven\src\main\java\easymall\dao\ProductsDao.java
 D:\java\workspace\EasyMall-Maven\src\main\java\easymall\dao\UserDao.java

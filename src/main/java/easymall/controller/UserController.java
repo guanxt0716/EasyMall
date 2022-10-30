@@ -22,14 +22,14 @@ public class UserController {
 	public String login(User user, HttpSession session,Model model) {
 		User user1 = userService.login(user.getUsername());
 		if (user1==null) {
-			model.addAttribute("message", "ÄúÊäÈëµÄÓÃ»§Ãû²»´æÔÚ");
+			model.addAttribute("message", "æ‚¨è¾“å…¥çš„ç”¨æˆ·åä¸å­˜åœ¨");
 			return "login";
 		}else if (user1.getPassword().equals(user.getPassword())) {
 			session.setAttribute("user", user1);
 			return "redirect:/index.jsp";
 		}
 		else {
-			model.addAttribute("message","ÄúÊäÈëµÄÃÜÂë´íÎó");
+			model.addAttribute("message","æ‚¨è¾“å…¥çš„å¯†ç é”™è¯¯");
 			return "login";
 		}
 		
@@ -37,36 +37,36 @@ public class UserController {
 	@RequestMapping("/checkUser")
 	public void checkUser(String username,HttpServletResponse response) throws IOException{
 		if (userService.login(username)==null) {
-			response.getWriter().print("¹§Ï²Äú£¬ÓÃ»§Ãû¿ÉÒÔÊ¹ÓÃ£¡");
+			response.getWriter().print("æ­å–œæ‚¨ï¼Œç”¨æˆ·åå¯ä»¥ä½¿ç”¨ï¼");
 		}
 		else {
-			response.getWriter().print("ÓÃ»§ÃûÒÑ±»Ê¹ÓÃ");
+			response.getWriter().print("ç”¨æˆ·åå·²è¢«ä½¿ç”¨");
 		}
 	}
 	@RequestMapping("/regist")
 	public String regist(User user,String valistr,HttpSession session, Model model) {
 		if ("".equals(user.getUsername()) || user.getUsername()==null) {
-			model.addAttribute("msg","ÓÃ»§Ãû²»ÄÜÎª¿Õ");
+			model.addAttribute("msg","ç”¨æˆ·åä¸èƒ½ä¸ºç©º");
 			return "regist";
 		}
 		if ("".equals(user.getPassword()) || user.getPassword()==null) {
-			model.addAttribute("msg","ÃÜÂë²»ÄÜÎª¿Õ");
+			model.addAttribute("msg","å¯†ç ä¸èƒ½ä¸ºç©º");
 			return "regist";
 		}
 		if ("".equals(valistr) || valistr==null)  {
-			model.addAttribute("msg","ÑéÖ¤Âë²»ÄÜÎª¿Õ");
+			model.addAttribute("msg","éªŒè¯ç ä¸èƒ½ä¸ºç©º");
 		}
 		if (!valistr.equalsIgnoreCase(session.getAttribute("code").toString())) {
-			model.addAttribute("msg","ÑéÖ¤Âë²»Ò»ÖÂ");
+			model.addAttribute("msg","éªŒè¯ç ä¸ä¸€è‡´");
 		}
 		if (userService.login(user.getUsername())!=null) {
-			model.addAttribute("msg","²»ÄÜÖØ¸´×¢²á");
+			model.addAttribute("msg","ä¸èƒ½é‡å¤æ³¨å†Œ");
 		}
 		if (userService.regist(user)>0) {
-			model.addAttribute("msg","×¢²á³É¹¦");
+			model.addAttribute("msg","æ³¨å†ŒæˆåŠŸ");
 			return "regist";
 		}else {
-			model.addAttribute("msg","×¢²áÊ§°Ü£¡");
+			model.addAttribute("msg","æ³¨å†Œå¤±è´¥ï¼");
 			return "regist";
 		}
 	}

@@ -17,9 +17,14 @@ public class IndexController {
 	public String register() {
 		return "regist";
 	}
+	@RequestMapping("/index")
+	public String index() {
+		return "index";
+	}
 	@RequestMapping("/logout")
 	public String logout(HttpSession session){
 		session.invalidate();
 		return "redirect:/index.jsp";
 	}
+	
 }

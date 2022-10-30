@@ -20,7 +20,7 @@
 		</div>	
 	</div>
 	<div id="line2">
-		<img id="logo" src="img/head/logo.jpg"/>
+		<img id="logo" src="${ pageContext.request.contextPath }/img/head/logo.jpg"/>
 		<input type="text" name=""/>
 		<input type="button" value="搜 索"/>
 		<span id="goto">
@@ -32,16 +32,16 @@
 	<div id="line3">
 		<div id="content">
 			<ul>
-				<li><a href="#">首页</a></li>
-				<li><a href="#">全部商品</a></li>
-				<li><a href="#">手机数码</a></li>
-				<li><a href="#">电脑平板</a></li>
-				<li><a href="#">家用电器</a></li>
-				<li><a href="#">汽车用品</a></li>
-				<li><a href="#">食品饮料</a></li>
-				<li><a href="#">图书杂志</a></li>
-				<li><a href="#">服装服饰</a></li>
-				<li><a href="#">理财产品</a></li>
+				<li><a href="">首页</a></li>
+				<li><a href="${ pageContext.request.contextPath }/prodlist">全部商品</a></li>
+				<li><a href="${ pageContext.request.contextPath }/prodclass/手机数码">手机数码</a></li>
+				<li><a href="${ pageContext.request.contextPath }/prodclass/电脑平板">电脑平板</a></li>
+				<li><a href="${ pageContext.request.contextPath }/prodclass/家用电器">家用电器</a></li>
+				<li><a href="${ pageContext.request.contextPath }/prodclass/汽车用品">汽车用品</a></li>
+				<li><a href="${ pageContext.request.contextPath }/prodclass/食品饮料">食品饮料</a></li>
+				<li><a href="${ pageContext.request.contextPath }/prodclass/图书杂志">图书杂志</a></li>
+				<li><a href="${ pageContext.request.contextPath }/prodclass/服装服饰">服装服饰</a></li>
+				<li><a href="${ pageContext.request.contextPath }/prodclass/理财产品">理财产品</a></li>
 			</ul>
 		</div>
 	</div>
