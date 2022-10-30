@@ -5,7 +5,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 <mapper namespace="easymall.dao.ProductsDao">
 	<select id="allcategorys" resultType="String">
-		select distinct(category) from products
+		select name from category
 	</select>
 	<select id="prodlist" resultType="easymall.po.Products" parameterType="map">
 		select * from products where (price between #{minPrice} and #{maxPrice})

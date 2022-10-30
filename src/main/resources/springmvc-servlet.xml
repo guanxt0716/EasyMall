@@ -45,9 +45,9 @@
 	</bean>
 	
 	<!-- 托管MyExceptionHandler -->
-	<!--
+	
 	<bean class="easymall.exception.MyExceptionHandler" />
-	-->
+
 	<!-- 文件上传 -->
 	<!--
 	<bean id="multipartResolver"
