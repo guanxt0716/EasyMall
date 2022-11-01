@@ -16,4 +16,6 @@ public interface CartService {
 	public List<MyCart> showcart(Integer user_id);
 	public void updateBuyNum(Cart cart);
 	public void delCart(Integer cartID);
+
+	public MyCart findByCartID(Integer cartID);
 }

@@ -131,8 +131,24 @@
 			//设置所有商品的总价
 			$("#span_2").text(totalMoney);
 			
-		});		
+		});	
+		/*	去结算	*/
+		$(".goto_order").click(function(){			
+			var arr = [];//初始化一个数组arr，用于保存获得多选框的值。
+			$('input:checkbox:checked').each(function(){
+				if($(this).attr("class") != "allC"){
+					arr.push($(this).attr('id'));
+				}
+			});
+			var cartIds=arr.toString();
+			//使用Ajax进行跳转，并带参数
+		$.post("${ pageContext.request.contextPath }/order/order_add",{"cartIds":cartIds},function(){
+			window.location="${pageContext.request.contextPath}/order/order_add?cartIds="+cartIds;
+			});				
+		});
 	});
+
+
 </script>			
 </head>
 
@@ -188,11 +204,11 @@
 					<div id="div_sum">
 						<span id="span_1">总价：${sum }</span>
 						<span>￥</span>
-						<span id="span_2" class="total_sum_price">199</span>&nbsp;&nbsp;&nbsp;
+						<span id="span_2" class="total_sum_price">${sum}</span>&nbsp;&nbsp;&nbsp;
 					</div>
 				</div>
 				<div id="total_2">	
-					<a id="goto_order" href="javascript:void(0)">去结算</a>
+					<a class="goto_order" href="javascript:void(0)">去结算</a>
 				</div>
 			</div>
 		</div>

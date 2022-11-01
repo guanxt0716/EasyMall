@@ -49,4 +49,10 @@ public class CartServiceImpl implements CartService {
 		cartDao.delCart(cartID);
 	}
 
+	@Override
+	public MyCart findByCartID(Integer cartID) {
+		// TODO Auto-generated method stub
+		return cartDao.findByCartID(cartID);
+	}
+
 }

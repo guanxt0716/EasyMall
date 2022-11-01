@@ -22,4 +22,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 <delete id="delCart" parameterType="Integer">
  delete from cart where cartID=#{cartID}
 </delete>
+<select id="findByCartID" parameterType="Integer" resultType="easymall.pojo.MyCart">
+	select cartID,pid,name,imgurl,price,num from cart,products
+	where cart.pid=products.id and cartID=#{cartID}
+</select>
 </mapper>

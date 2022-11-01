@@ -11,6 +11,8 @@ import easymall.pojo.MyCart;
 @Mapper
 public interface CartDao {
 
+	
+	public MyCart findByCartID(Integer cartID);
 	public Cart findCart(Cart cart) ;
 
 	public void updateCart(Cart cart);
