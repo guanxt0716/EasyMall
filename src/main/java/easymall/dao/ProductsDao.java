@@ -18,4 +18,7 @@ public interface ProductsDao {
 	public Products prodInfo(String pid);
 	//根据分类查找商品
 	public List<Products> proclass(String category);
+	public Object findByImgurl(String imgurl);
+	public void save(Products products);
+	public void delprod(String id);
 }

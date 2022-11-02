@@ -7,6 +7,13 @@ public class Products {
 	private String category;
 	private Integer pnum;
 	private String imgurl;
+	private Integer soldnum;
+	public Integer getSoldnum() {
+		return soldnum;
+	}
+	public void setSoldnum(Integer soldnum) {
+		this.soldnum = soldnum;
+	}
 	private String description;
 	public String getId() {
 		return id;

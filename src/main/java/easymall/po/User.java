@@ -6,6 +6,13 @@ public class User {
 	private String password;
 	private String nickname;
 	private String email;
+	private	Integer usertype;
+	public Integer getUsertype() {
+		return usertype;
+	}
+	public void setUsertype(Integer usertype) {
+		this.usertype = usertype;
+	}
 	public Integer getId() {
 		return id;
 	}

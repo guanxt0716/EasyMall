@@ -27,6 +27,7 @@
 		<span id="goto">
 			<a id="goto_order" href="${ pageContext.request.contextPath }/order/showorder">我的订单</a>
 			<a id="goto_cart" href="${ pageContext.request.contextPath }/cart/showcart">我的购物车</a>
+			<a id="goto_admin" href="${ pageContext.request.contextPath }/admin/login">后台登录</a>
 		</span>
 		<img id="erwm" src="${ pageContext.request.contextPath }/img/head/qr.jpg"/>
 	</div>

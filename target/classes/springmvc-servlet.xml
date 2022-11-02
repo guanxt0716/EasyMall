@@ -20,7 +20,7 @@
 
 	<!-- 使用扫描机制，扫描控制器类 -->
 	<context:component-scan base-package="easymall.controller" />
-
+	<context:component-scan base-package="easymall.controller.admin" />
 	<!-- springmvc开启所有注解功能 -->
 	<mvc:annotation-driven />
 
@@ -49,10 +49,10 @@
 	<bean class="easymall.exception.MyExceptionHandler" />
 
 	<!-- 文件上传 -->
-	<!--
+	
 	<bean id="multipartResolver"
 		class="org.springframework.web.multipart.commons.CommonsMultipartResolver"
 		p:defaultEncoding="UTF-8" p:maxUploadSize="5400000" p:uploadTempDir="fileUpload/temp">
 	</bean>
-	-->
-</beans>
+	
+</beans>	
